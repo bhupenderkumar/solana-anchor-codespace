@@ -1,0 +1,17 @@
+{
+  "name": "Solana Anchor Dev",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "postCreateCommand": "anchor --version && solana --version",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
+  "forwardPorts": [8899],
+  "remoteUser": "vscode"
+}
