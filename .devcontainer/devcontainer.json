@@ -3,9 +3,6 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash"
-  },
   "postCreateCommand": "anchor --version && solana --version",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
@@ -13,5 +10,12 @@
     }
   },
   "forwardPorts": [8899],
-  "remoteUser": "vscode"
+  "remoteUser": "vscode",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      }
+    }
+  }
 }
